@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { submitCareerApplication } from '../services/firebase';
+import careerBackground from '../assets/cariorbackground.jpg';
 
 const Careers = () => {
   const [formData, setFormData] = useState({
@@ -19,7 +20,7 @@ const Careers = () => {
       title: 'Frontend Developer',
       type: 'Full-time',
       location: 'Remote/On-site',
-      experience: '2+ years',
+      experience: '0-2 years',
       skills: ['React', 'JavaScript', 'HTML/CSS', 'TypeScript'],
       description: 'We are looking for a skilled Frontend Developer to join our team and help build amazing user interfaces.'
     },
@@ -27,7 +28,7 @@ const Careers = () => {
       title: 'Backend Developer', 
       type: 'Full-time',
       location: 'Remote/On-site',
-      experience: '3+ years',
+      experience: '0-2 years',
       skills: ['Node.js', 'Python', 'MongoDB', 'SQL'],
       description: 'Join our backend team to develop robust server-side applications and APIs.'
     },
@@ -35,7 +36,7 @@ const Careers = () => {
       title: 'Full Stack Developer',
       type: 'Full-time',
       location: 'Remote/On-site', 
-      experience: '4+ years',
+      experience: '0-2 years',
       skills: ['MERN Stack', 'Python', 'DevOps', 'Cloud'],
       description: 'Looking for an experienced Full Stack Developer to work on end-to-end web applications.'
     },
@@ -43,7 +44,7 @@ const Careers = () => {
       title: 'Mobile App Developer',
       type: 'Full-time',
       location: 'Remote/On-site',
-      experience: '2+ years', 
+      experience: '0-2 years', 
       skills: ['React Native', 'Flutter', 'iOS', 'Android'],
       description: 'Develop cross-platform mobile applications using modern frameworks.'
     }
@@ -90,13 +91,25 @@ const Careers = () => {
   return (
     <div className="careers-page">
       {/* Hero Section */}
-      <section className="careers-hero py-20 bg-gradient-to-r from-primary to-secondary text-white">
-        <div className="container mx-auto px-4 max-w-7xl">
+      <section 
+        className="careers-hero py-20 text-white relative overflow-hidden"
+        style={{
+          backgroundImage: `url(${careerBackground})`,
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+          backgroundRepeat: 'no-repeat',
+          height: '70vh'       
+        }}
+      >
+        <div className="container mx-auto px-4 max-w-7xl relative z-10">
           <div className="text-center">
-            <h1 className="hero-title text-4xl md:text-6xl font-bold mb-6">Join Our Team</h1>
-            <p className="hero-subtitle text-xl md:text-2xl text-blue-100 max-w-3xl mx-auto">
-              Build your career with YDCODERS and work on exciting projects that make a difference
+            <h1 className="hero-title text-4xl md:text-6xl font-bold mb-6">Career</h1>
+            <p className="hero-subtitle text-xl md:text-2xl text-blue-100 max-w-3xl mx-auto mb-4">
+              Job Opening In IT Company. Apply Now!
             </p>
+            <div className="hero-description text-lg md:text-xl text-white max-w-4xl mx-auto">
+              <p>IT Experts are hired by YDCODERS and fully dedicated to Client Services or IT projects.</p>
+            </div>
           </div>
         </div>
       </section>
@@ -115,18 +128,18 @@ const Careers = () => {
                   <div className="p-8">
                     <div className="flex justify-between items-start mb-6">
                       <h5 className="position-title text-2xl font-bold text-gray-800">{position.title}</h5>
-                      <span className="position-type bg-primary text-white px-3 py-1 rounded-full text-sm font-medium">
+                      <span className="position-type bg-blue-600 text-white px-3 py-1 rounded-full text-sm font-medium">
                         {position.type}
                       </span>
                     </div>
                     
                     <div className="position-meta mb-6 space-y-2">
                       <div className="meta-item flex items-center text-gray-600">
-                        <i className="fas fa-map-marker-alt mr-3 text-primary"></i>
+                        <i className="fas fa-map-marker-alt mr-3 text-blue-600"></i>
                         {position.location}
                       </div>
                       <div className="meta-item flex items-center text-gray-600">
-                        <i className="fas fa-clock mr-3 text-primary"></i>
+                        <i className="fas fa-clock mr-3 text-blue-600"></i>
                         {position.experience}
                       </div>
                     </div>
@@ -141,7 +154,7 @@ const Careers = () => {
                         {position.skills.map((skill, skillIndex) => (
                           <span 
                             key={skillIndex} 
-                            className="skill-tag bg-gray-100 text-gray-700 px-3 py-1 rounded-full text-sm font-medium hover:bg-primary hover:text-white transition-colors duration-200"
+                            className="skill-tag bg-gray-100 text-gray-700 px-3 py-1 rounded-full text-sm font-medium hover:bg-blue-600 hover:text-white transition-colors duration-200"
                           >
                             {skill}
                           </span>
@@ -185,7 +198,7 @@ const Careers = () => {
                       value={formData.name}
                       onChange={handleInputChange}
                       required
-                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent transition-all duration-300 outline-none"
+                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-300 outline-none"
                     />
                   </div>
                   
@@ -199,7 +212,7 @@ const Careers = () => {
                       value={formData.email}
                       onChange={handleInputChange}
                       required
-                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent transition-all duration-300 outline-none"
+                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-300 outline-none"
                     />
                   </div>
                 </div>
@@ -215,7 +228,7 @@ const Careers = () => {
                       value={formData.phone}
                       onChange={handleInputChange}
                       required
-                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent transition-all duration-300 outline-none"
+                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-300 outline-none"
                     />
                   </div>
                   
@@ -228,7 +241,7 @@ const Careers = () => {
                       value={formData.position}
                       onChange={handleInputChange}
                       required
-                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent transition-all duration-300 outline-none bg-white"
+                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-300 outline-none bg-white"
                     >
                       <option value="">Select Position</option>
                       {positions.map((pos, index) => (
@@ -249,7 +262,7 @@ const Careers = () => {
                     onChange={handleInputChange}
                     placeholder="e.g., 3 years"
                     required
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent transition-all duration-300 outline-none"
+                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-300 outline-none"
                   />
                 </div>
                 
@@ -264,7 +277,7 @@ const Careers = () => {
                     onChange={handleInputChange}
                     placeholder="e.g., React, Node.js, Python"
                     required
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent transition-all duration-300 outline-none"
+                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-300 outline-none"
                   />
                 </div>
                 
@@ -278,14 +291,14 @@ const Careers = () => {
                     value={formData.message}
                     onChange={handleInputChange}
                     placeholder="Tell us why you're interested in this position..."
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent transition-all duration-300 outline-none resize-none"
+                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-300 outline-none resize-none"
                   />
                 </div>
                 
                 <button
                   type="submit"
                   disabled={isSubmitting}
-                  className="w-full bg-primary hover:bg-primary-dark text-white font-semibold py-4 px-6 rounded-lg transition-all duration-300 disabled:opacity-70 disabled:cursor-not-allowed hover:shadow-lg transform hover:-translate-y-0.5"
+                  className="w-full bg-blue-600 hover:bg-blue-700 text-white font-semibold py-4 px-6 rounded-lg transition-all duration-300 disabled:opacity-70 disabled:cursor-not-allowed hover:shadow-lg transform hover:-translate-y-0.5 focus:outline-none focus:ring-4 focus:ring-blue-300"
                 >
                   {isSubmitting ? 'Submitting Application...' : 'Submit Application'}
                 </button>

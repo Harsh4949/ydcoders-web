@@ -6,61 +6,81 @@ const ServicesSection = () => {
       icon: 'fa-laptop',
       title: 'Web App Development',
       description: 'Our custom web development services include both front-end and back-end development for all your needs.',
-      color: 'bg-blue-500'
+      color: 'bg-blue-500',
+      features: ['React', 'Node.js', 'MongoDB', 'Responsive Design']
     },
     {
       icon: 'fa-mobile-alt',
       title: 'Mobile App Development', 
       description: 'We provide multi-platform app solutions for Android and iOS devices using modern frameworks.',
-      color: 'bg-green-500'
+      color: 'bg-green-500',
+      features: ['React Native', 'Flutter', 'iOS', 'Android']
     },
     {
       icon: 'fa-bullhorn',
       title: 'Digital Marketing',
       description: 'Increase visibility and engage with your customers through our effective digital marketing services.',
-      color: 'bg-orange-500'
+      color: 'bg-orange-500',
+      features: ['SEO', 'Social Media', 'Content Marketing', 'PPC']
     },
     {
       icon: 'fa-code',
       title: 'Custom Software',
       description: 'Tailored software solutions designed specifically for your business requirements and workflow.',
-      color: 'bg-purple-500'
+      color: 'bg-purple-500',
+      features: ['Custom Development', 'API Integration', 'Database Design', 'Cloud Solutions']
     },
     {
       icon: 'fa-cloud',
       title: 'Cloud Solutions',
       description: 'Scalable cloud infrastructure and migration services to optimize your business operations.',
-      color: 'bg-teal-500'
+      color: 'bg-teal-500',
+      features: ['AWS', 'Azure', 'Google Cloud', 'DevOps']
     },
     {
       icon: 'fa-shield-alt',
       title: 'Cybersecurity',
       description: 'Comprehensive security solutions to protect your digital assets and customer data.',
-      color: 'bg-red-500'
+      color: 'bg-red-500',
+      features: ['Security Audit', 'Penetration Testing', 'Data Protection', 'Compliance']
     }
   ];
 
   return (
-    <section id="service" className="services-section py-20 pt-32 bg-gray-50">
+    <section id="services" className="services-section py-20 pt-32 bg-gray-50" role="main" aria-labelledby="services-heading">
       <div className="container mx-auto px-4 max-w-7xl">
-        <div className="text-center mb-16">
-          <h1 className="section-title text-4xl md:text-5xl font-bold text-gray-800 mb-6">Our Services</h1>
+        <header className="text-center mb-16">
+          <h2 id="services-heading" className="section-title text-4xl md:text-5xl font-bold text-gray-800 mb-6">Our Services</h2>
           <p className="section-subtitle text-xl text-gray-600 max-w-3xl mx-auto">
             We help you build high-quality digital solutions and deliver 
             a wide range of professional services to our clients.
           </p>
-        </div>
+        </header>
         
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {services.map((service, index) => (
-            <div key={index} className="service-card bg-white rounded-lg shadow-lg p-8 hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 relative overflow-hidden group">
+            <article 
+              key={index} 
+              className="service-card bg-white rounded-lg shadow-lg p-8 hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 relative overflow-hidden group"
+              aria-labelledby={`service-${index}-title`}
+            >
               <div className={`service-icon w-16 h-16 ${service.color} rounded-lg flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300`}>
-                <i className={`fas ${service.icon} text-white text-2xl`}></i>
+                <i className={`fas ${service.icon} text-white text-2xl`} aria-hidden="true"></i>
               </div>
-              <h5 className="service-title text-xl font-semibold text-gray-800 mb-4">{service.title}</h5>
-              <p className="service-description text-gray-600 leading-relaxed">{service.description}</p>
-              <div className="service-hover-effect absolute inset-0 bg-gradient-to-r from-primary/5 to-secondary/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-            </div>
+              <h3 id={`service-${index}-title`} className="service-title text-xl font-semibold text-gray-800 mb-4">{service.title}</h3>
+              <p className="service-description text-gray-600 leading-relaxed mb-4">{service.description}</p>
+              <div className="flex flex-wrap gap-2">
+                {service.features.map((feature, featureIndex) => (
+                  <span 
+                    key={featureIndex}
+                    className="px-3 py-1 bg-gray-100 text-gray-700 text-sm rounded-full"
+                  >
+                    {feature}
+                  </span>
+                ))}
+              </div>
+              <div className="service-hover-effect absolute inset-0 bg-gradient-to-r from-blue-500/5 to-purple-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+            </article>
           ))}
         </div>
       </div>

@@ -1,0 +1,31 @@
+User-agent: *
+Allow: /
+
+# Allow all web crawlers access to all content
+Disallow: 
+
+# Sitemap location
+Sitemap: https://ydcoders.com/sitemap.xml
+
+# Crawl-delay (optional - 1 second delay between requests)
+Crawl-delay: 1
+
+# Allow specific paths
+Allow: /careers
+Allow: /services
+Allow: /contact
+
+# Block specific file types (if any)
+Disallow: /*.json$
+Disallow: /*.xml$
+Disallow: /api/
+
+# Allow search engines to access CSS and JS for better rendering
+Allow: /static/
+Allow: /assets/
+Allow: /*.css
+Allow: /*.js
+Allow: /*.png
+Allow: /*.jpg
+Allow: /*.gif
+Allow: /*.svg

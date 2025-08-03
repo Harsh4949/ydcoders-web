@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { submitContactForm } from '../services/firebase';
 import HeroSection from '../components/HeroSection';
 import ServicesSection from '../components/ServicesSection';
+import SEO from '../components/SEO';
 
 const Home = () => {
   const [formData, setFormData] = useState({
@@ -12,6 +13,72 @@ const Home = () => {
   });
   const [showAlert, setShowAlert] = useState({ show: false, message: '', variant: 'success' });
   const [isSubmitting, setIsSubmitting] = useState(false);
+
+  // Structured data for homepage
+  const structuredData = {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "YDCODERS",
+    "url": "https://ydcoders.com",
+    "logo": "https://ydcoders.com/logo.svg",
+    "description": "Leading IT company providing web development, mobile app development, digital marketing, and custom software solutions.",
+    "foundingDate": "2020",
+    "areaServed": "Worldwide",
+    "serviceType": [
+      "Web Development",
+      "Mobile App Development", 
+      "Digital Marketing",
+      "Custom Software Development",
+      "IT Consulting",
+      "Cloud Solutions",
+      "Cybersecurity"
+    ],
+    "address": {
+      "@type": "PostalAddress",
+      "addressCountry": "IN"
+    },
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "contactType": "Customer Service",
+      "availableLanguage": "English",
+      "url": "https://ydcoders.com/#contact"
+    },
+    "sameAs": [
+      "https://linkedin.com/company/ydcoders",
+      "https://twitter.com/ydcoders", 
+      "https://facebook.com/ydcoders"
+    ],
+    "hasOfferCatalog": {
+      "@type": "OfferCatalog",
+      "name": "IT Services",
+      "itemListElement": [
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "Web Development",
+            "description": "Custom web development services including front-end and back-end development"
+          }
+        },
+        {
+          "@type": "Offer", 
+          "itemOffered": {
+            "@type": "Service",
+            "name": "Mobile App Development",
+            "description": "Multi-platform app solutions for Android and iOS devices using modern frameworks"
+          }
+        },
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service", 
+            "name": "Digital Marketing",
+            "description": "Effective digital marketing services to increase visibility and engage customers"
+          }
+        }
+      ]
+    }
+  };
 
   const handleInputChange = (e) => {
     const { name, value } = e.target;
@@ -54,6 +121,14 @@ const Home = () => {
 
   return (
     <div className="home-page">
+      <SEO 
+        title="YDCODERS - IT Experts | Web Development, Mobile Apps & Digital Solutions"
+        description="Leading IT company providing world-class web development, mobile app development, digital marketing, and custom software solutions. Hire experienced IT experts for your business growth."
+        keywords="YDCODERS, IT solutions, web development, mobile app development, digital marketing, software development, React, Node.js, Python, Flutter, IT experts, technology solutions, custom software, responsive design, SEO services, cloud solutions, cybersecurity"
+        url="/"
+        structuredData={structuredData}
+      />
+      
       {/* Hero Section */}
       <HeroSection />
 

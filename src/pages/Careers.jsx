@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { submitCareerApplication } from '../services/firebase';
 import careerBackground from '../assets/cariorbackground.jpg';
+import SEO from '../components/SEO';
 
 const Careers = () => {
   const [formData, setFormData] = useState({
@@ -22,7 +23,8 @@ const Careers = () => {
       location: 'Remote/On-site',
       experience: '0-2 years',
       skills: ['React', 'JavaScript', 'HTML/CSS', 'TypeScript'],
-      description: 'We are looking for a skilled Frontend Developer to join our team and help build amazing user interfaces.'
+      description: 'We are looking for a skilled Frontend Developer to join our team and help build amazing user interfaces.',
+      salary: 'Competitive'
     },
     {
       title: 'Backend Developer', 
@@ -30,7 +32,8 @@ const Careers = () => {
       location: 'Remote/On-site',
       experience: '0-2 years',
       skills: ['Node.js', 'Python', 'MongoDB', 'SQL'],
-      description: 'Join our backend team to develop robust server-side applications and APIs.'
+      description: 'Join our backend team to develop robust server-side applications and APIs.',
+      salary: 'Competitive'
     },
     {
       title: 'Full Stack Developer',
@@ -38,7 +41,8 @@ const Careers = () => {
       location: 'Remote/On-site', 
       experience: '0-2 years',
       skills: ['MERN Stack', 'Python', 'DevOps', 'Cloud'],
-      description: 'Looking for an experienced Full Stack Developer to work on end-to-end web applications.'
+      description: 'Looking for an experienced Full Stack Developer to work on end-to-end web applications.',
+      salary: 'Competitive'
     },
     {
       title: 'Mobile App Developer',
@@ -46,9 +50,37 @@ const Careers = () => {
       location: 'Remote/On-site',
       experience: '0-2 years', 
       skills: ['React Native', 'Flutter', 'iOS', 'Android'],
-      description: 'Develop cross-platform mobile applications using modern frameworks.'
+      description: 'Develop cross-platform mobile applications using modern frameworks.',
+      salary: 'Competitive'
     }
   ];
+
+  // Structured data for careers page
+  const structuredData = {
+    "@context": "https://schema.org",
+    "@type": "JobPosting",
+    "hiringOrganization": {
+      "@type": "Organization",
+      "name": "YDCODERS",
+      "sameAs": "https://ydcoders.com",
+      "logo": "https://ydcoders.com/logo.svg"
+    },
+    "jobLocation": {
+      "@type": "Place",
+      "address": {
+        "@type": "PostalAddress",
+        "addressCountry": "IN"
+      }
+    },
+    "title": "IT Expert Positions",
+    "description": "Join YDCODERS and work on exciting IT projects. We offer positions in Frontend Development, Backend Development, Full Stack Development, and Mobile App Development.",
+    "employmentType": "FULL_TIME",
+    "validThrough": "2025-12-31",
+    "applicantLocationRequirements": {
+      "@type": "Country",
+      "name": "India"
+    }
+  };
 
   const handleInputChange = (e) => {
     const { name, value } = e.target;
@@ -90,6 +122,15 @@ const Careers = () => {
 
   return (
     <div className="careers-page">
+      <SEO 
+        title="Careers at YDCODERS - Join Our IT Expert Team | Job Openings"
+        description="Join YDCODERS team! We're hiring Frontend Developers, Backend Developers, Full Stack Developers, and Mobile App Developers. Apply now for exciting IT career opportunities with competitive packages."
+        keywords="YDCODERS careers, IT jobs, developer jobs, frontend developer, backend developer, full stack developer, mobile app developer, React jobs, Node.js jobs, Python jobs, IT career opportunities, software development jobs"
+        url="/careers"
+        image="https://ydcoders.com/images/careers-og.jpg"
+        structuredData={structuredData}
+      />
+      
       {/* Hero Section */}
       <section 
         className="careers-hero py-20 text-white relative overflow-hidden"

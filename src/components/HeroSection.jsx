@@ -29,14 +29,14 @@ const HeroSection = () => {
               <nav className="hero-buttons flex flex-col sm:flex-row gap-4 justify-center" role="navigation" aria-label="Main navigation">
                 <a 
                   href="#service" 
-                  className="btn hero-btn primary bg-white text-primary hover:bg-gray-100 px-8 py-4 rounded-lg font-semibold transition-all duration-300 hover:shadow-lg transform hover:-translate-y-1"
+                  className="btn hero-btn primary bg-white text-gray-900 hover:bg-gray-100 px-8 py-4 rounded-lg font-semibold"
                   aria-label="View our IT services and solutions"
                 >
                   Our Services
                 </a>
                 <a 
                   href="#contact" 
-                  className="btn hero-btn secondary border-2 border-white text-white hover:bg-white hover:text-primary px-8 py-4 rounded-lg font-semibold transition-all duration-300 hover:shadow-lg transform hover:-translate-y-1"
+                  className="btn hero-btn secondary border-2 border-white text-white hover:bg-white hover:text-gray-900 px-8 py-4 rounded-lg font-semibold"
                   aria-label="Get in touch with our team"
                 >
                   Get in Touch
@@ -44,12 +44,7 @@ const HeroSection = () => {
               </nav>
             </header>
           </div>
-        </div>      {/* Animated background elements */}
-      <div className="hero-bg-elements absolute inset-0 pointer-events-none z-20">
-        <div className="floating-element element-1 absolute w-20 h-20 bg-white/10 rounded-full animate-float" style={{top: '20%', left: '10%'}}></div>
-        <div className="floating-element element-2 absolute w-16 h-16 bg-yellow-400/20 rounded-full animate-bounce" style={{top: '60%', right: '15%'}}></div>
-        <div className="floating-element element-3 absolute w-12 h-12 bg-orange-500/20 rounded-full animate-pulse" style={{bottom: '30%', left: '20%'}}></div>
-      </div>
+        </div>
     </section>
   );
 };

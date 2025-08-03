@@ -136,11 +136,17 @@ const Home = () => {
       <ServicesSection />
 
       {/* Contact Section */}
-      <section id="contact" className="contact-section py-20 pt-32 bg-gray-50">
-        <div className="container mx-auto px-4 max-w-7xl">
+      <section id="contact" className="contact-section py-20  bg-gray-50">
+        <div className="container mx-auto px-4 max-w-7xl ">
           <div className="text-center mb-12">
-            <h1 className="section-heading text-4xl md:text-5xl font-bold text-gray-800 mb-4">
-              Get in Touch
+            <h1 className="section-heading text-3xl md:text-5xl font-bold text-gray-800 mb-4 relative inline-block mx-8 tracking-wider">
+              <span className="relative">
+                Get In Touch
+                {/* Top-left corner border */}
+                <span className="absolute -top-3 -left-6 w-10 h-10 border-t-4 border-l-4 border-gray-800"></span>
+                {/* Bottom-right corner border */}
+                <span className="absolute -bottom-3 -right-8 w-10 h-10 border-t-4 border-l-4 border-gray-800 rotate-180"></span>
+              </span>
             </h1>
           </div>
           

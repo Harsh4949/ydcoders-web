@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
+import logo from '../assets/logo.png';
 
 const Header = () => {
   const [scrolled, setScrolled] = useState(false);
@@ -39,7 +40,7 @@ const Header = () => {
           {/* Logo */}
           <Link to="/" className="flex items-center transition-transform duration-300 hover:scale-105">
             <img 
-              src="/src/assets/image.png" 
+              src={logo} 
               alt="YDCODERS Logo" 
               className="h-14 w-auto"
             /> 

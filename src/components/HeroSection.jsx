@@ -5,7 +5,7 @@ const HeroSection = () => {
   return (
     <section 
       id="home" 
-      className="hero-section min-h-screen flex items-center justify-center relative overflow-hidden"
+      className="hero-section min-h-screen flex items-center justify-center relative overflow-hidden pt-20"
       style={{
         backgroundImage: `url(${heroBackground})`,
         backgroundSize: 'cover',

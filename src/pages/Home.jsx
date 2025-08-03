@@ -61,7 +61,7 @@ const Home = () => {
       <ServicesSection />
 
       {/* Contact Section */}
-      <section id="contact" className="contact-section py-20 bg-gray-50">
+      <section id="contact" className="contact-section py-20 pt-32 bg-gray-50">
         <div className="container mx-auto px-4 max-w-7xl">
           <div className="text-center mb-12">
             <h1 className="section-heading text-4xl md:text-5xl font-bold text-gray-800 mb-4">

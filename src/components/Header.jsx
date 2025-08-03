@@ -25,7 +25,14 @@ const Header = () => {
       // If on home page, scroll to section
       const element = document.getElementById(sectionId);
       if (element) {
-        element.scrollIntoView({ behavior: 'smooth' });
+        const headerOffset = 70; // Account for fixed header
+        const elementPosition = element.getBoundingClientRect().top;
+        const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+        
+        window.scrollTo({
+          top: offsetPosition,
+          behavior: 'smooth'
+        });
       }
     }
     setMobileMenuOpen(false);
@@ -33,7 +40,7 @@ const Header = () => {
 
   return (
     <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-      scrolled ? 'bg-dark-800 shadow-lg py-2' : 'bg-transparent py-4'
+      scrolled ? 'bg-gray-900 shadow-lg py-3' : 'bg-transparent py-4'
     }`}>
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between">
@@ -42,40 +49,34 @@ const Header = () => {
             <img 
               src={logo} 
               alt="YDCODERS Logo" 
-              className="h-14 w-auto"
+              className="h-12 w-auto"
             /> 
-            <span className="text-white text-xl font-bold ml-2">YDCODERS </span> 
+            <span className="text-white text-lg font-bold ml-2">YDCODERS </span> 
           </Link>
           
           {/* Desktop Navigation */}
           <div className="hidden lg:flex items-center space-x-8">
-            <Link 
-              to="/" 
-              className="text-white font-medium transition-all duration-300 hover:text-primary-400 hover:-translate-y-0.5"
+            <button 
+              onClick={() => scrollToSection('home')}
+              className="text-white font-medium transition-all duration-300 hover:text-blue-400 hover:-translate-y-0.5"
             >
               Home
-            </Link>
-            <button 
-              onClick={() => scrollToSection('about')}
-              className="text-white font-medium transition-all duration-300 hover:text-primary-400 hover:-translate-y-0.5"
-            >
-              About
             </button>
             <button 
-              onClick={() => scrollToSection('service')}
-              className="text-white font-medium transition-all duration-300 hover:text-primary-400 hover:-translate-y-0.5"
+              onClick={() => scrollToSection('services')}
+              className="text-white font-medium transition-all duration-300 hover:text-blue-400 hover:-translate-y-0.5"
             >
               Services
             </button>
             <Link 
               to="/careers" 
-              className="text-white font-medium transition-all duration-300 hover:text-primary-400 hover:-translate-y-0.5"
+              className="text-white font-medium transition-all duration-300 hover:text-blue-400 hover:-translate-y-0.5"
             >
               Career
             </Link>
             <button 
               onClick={() => scrollToSection('contact')}
-              className="text-white font-medium transition-all duration-300 hover:text-primary-400 hover:-translate-y-0.5"
+              className="text-white font-medium transition-all duration-300 hover:text-blue-400 hover:-translate-y-0.5"
             >
               Contact
             </button>
@@ -94,36 +95,29 @@ const Header = () => {
         <div className={`lg:hidden transition-all duration-300 overflow-hidden ${
           mobileMenuOpen ? 'max-h-64 mt-4' : 'max-h-0'
         }`}>
-          <div className="bg-dark-800 rounded-lg py-4 px-6 space-y-4">
-            <Link 
-              to="/" 
-              className="block text-white font-medium transition-colors duration-300 hover:text-primary-400"
-              onClick={() => setMobileMenuOpen(false)}
+          <div className="bg-gray-900 rounded-lg py-4 px-6 space-y-4">
+            <button 
+              onClick={() => scrollToSection('home')}
+              className="block w-full text-left text-white font-medium transition-colors duration-300 hover:text-blue-400"
             >
               Home
-            </Link>
-            <button 
-              onClick={() => scrollToSection('about')}
-              className="block w-full text-left text-white font-medium transition-colors duration-300 hover:text-primary-400"
-            >
-              About
             </button>
             <button 
-              onClick={() => scrollToSection('service')}
-              className="block w-full text-left text-white font-medium transition-colors duration-300 hover:text-primary-400"
+              onClick={() => scrollToSection('services')}
+              className="block w-full text-left text-white font-medium transition-colors duration-300 hover:text-blue-400"
             >
               Services
             </button>
             <Link 
               to="/careers" 
-              className="block text-white font-medium transition-colors duration-300 hover:text-primary-400"
+              className="block text-white font-medium transition-colors duration-300 hover:text-blue-400"
               onClick={() => setMobileMenuOpen(false)}
             >
               Career
             </Link>
             <button 
               onClick={() => scrollToSection('contact')}
-              className="block w-full text-left text-white font-medium transition-colors duration-300 hover:text-primary-400"
+              className="block w-full text-left text-white font-medium transition-colors duration-300 hover:text-blue-400"
             >
               Contact
             </button>

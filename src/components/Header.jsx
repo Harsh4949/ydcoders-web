@@ -19,8 +19,22 @@ const Header = () => {
 
   const scrollToSection = (sectionId) => {
     if (location.pathname !== '/') {
-      // If not on home page, navigate to home first
+      // If not on home page, navigate to home first then scroll to section
       window.location.href = `/#${sectionId}`;
+      // Use setTimeout to ensure navigation completes before scrolling
+      setTimeout(() => {
+        const element = document.getElementById(sectionId);
+        if (element) {
+          const headerOffset = 70;
+          const elementPosition = element.getBoundingClientRect().top;
+          const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+          
+          window.scrollTo({
+            top: offsetPosition,
+            behavior: 'smooth'
+          });
+        }
+      }, 100);
     } else {
       // If on home page, scroll to section
       const element = document.getElementById(sectionId);
@@ -71,6 +85,9 @@ const Header = () => {
             <Link 
               to="/careers" 
               className="text-white font-medium transition-all duration-300 hover:text-blue-400 hover:-translate-y-0.5"
+              onClick={() => {
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+              }}
             >
               Career
             </Link>
@@ -111,7 +128,10 @@ const Header = () => {
             <Link 
               to="/careers" 
               className="block text-white font-medium transition-colors duration-300 hover:text-blue-400"
-              onClick={() => setMobileMenuOpen(false)}
+              onClick={() => {
+                setMobileMenuOpen(false);
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+              }}
             >
               Career
             </Link>

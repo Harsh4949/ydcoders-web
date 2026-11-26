@@ -37,10 +37,9 @@ const AdminLogin = () => {
         <div className="login-card bg-white rounded-xl shadow-2xl p-8">
           <div className="text-center mb-8">
             <img 
-              src="/images/image.png" 
+              src="/logo.jpeg" 
               alt="Tiwar Empire Private Limited Logo" 
-              height="60"
-              className="mx-auto mb-4"
+              className="h-16 w-16 mx-auto mb-4 rounded-lg object-cover"
             />
             <h3 className="login-title text-2xl font-bold text-gray-800 mb-2">Admin Login</h3>
             <p className="text-gray-600">Sign in to access the dashboard</p>

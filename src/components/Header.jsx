@@ -59,6 +59,11 @@ const Header = () => {
         <div className="flex items-center justify-between">
           {/* Logo */}
           <Link to="/" className="flex items-center transition-transform duration-300 hover:scale-105">
+            <img
+              src="/logo.jpeg"
+              alt="Tiwar Empire Private Limited"
+              className="h-10 w-10 rounded-md object-cover mr-3"
+            />
             <span className="text-white text-lg font-bold whitespace-nowrap">Tiwar Empire Private Limited</span> 
           </Link>
           

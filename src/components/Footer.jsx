@@ -64,8 +64,8 @@ const Footer = () => {
               <p>
                 Kavathe-Mahankal<br />
                 416419, India<br />
-                <span className="text-blue-400 font-semibold">Phone:</span> +91 8055808428<br />
-                <span className="text-blue-400 font-semibold">Email:</span> contact@ydcoders.com
+                <span className="text-blue-400 font-semibold">Phone:</span> +91 7983833010<br />
+                <span className="text-blue-400 font-semibold">Email:</span> tiwarempirepvtltd@zohomail.in
               </p>
             </div>
             

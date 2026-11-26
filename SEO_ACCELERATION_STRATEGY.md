@@ -32,7 +32,7 @@ Setup:
 - Business name: YDCoders
 - Category: Software Development Company
 - Address: Kavathe-Mahankal, 416419, India
-- Phone: +91 8055808428
+- Phone: +91 7983833010
 - Website: Your domain
 - Hours: Add business hours
 - Photos: Add office/team photos
@@ -139,7 +139,7 @@ Write for:
     "postalCode": "416419",
     "addressCountry": "IN"
   },
-  "telephone": "+91 8055808428",
+  "telephone": "+91 7983833010",
   "url": "https://ydcoders.com"
 }
 ```

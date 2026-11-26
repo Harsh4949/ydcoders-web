@@ -63,7 +63,7 @@ const Careers = () => {
       "@type": "Organization",
       "name": "YDCODERS",
       "sameAs": "https://ydcoders.com",
-      "logo": "https://ydcoders.com/logo.svg"
+      "logo": "https://ydcoders.com/logo.jpeg"
     },
     "jobLocation": {
       "@type": "Place",

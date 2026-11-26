@@ -20,7 +20,7 @@ const Home = () => {
     "@type": "Organization",
     "name": "YDCODERS",
     "url": "https://ydcoders.com",
-    "logo": "https://ydcoders.com/logo.svg",
+    "logo": "https://ydcoders.com/logo.jpeg",
     "description": "Leading IT company providing web development, mobile app development, digital marketing, and custom software solutions.",
     "foundingDate": "2020",
     "areaServed": "Worldwide",

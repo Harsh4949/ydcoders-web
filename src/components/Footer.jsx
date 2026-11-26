@@ -115,7 +115,7 @@ const Footer = () => {
         <div className="border-t border-white border-opacity-10 mt-8 pt-4">
           <div className="text-center">
             <p className="text-gray-400 text-sm">
-              &copy; 2025 YDCODERS. All Rights Reserved.
+              &copy; 2026 Tiwar Empire Private Limited. All Rights Reserved.
             </p>
           </div>
         </div>

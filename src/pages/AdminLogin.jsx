@@ -38,7 +38,7 @@ const AdminLogin = () => {
           <div className="text-center mb-8">
             <img 
               src="/images/image.png" 
-              alt="YDCODERS Logo" 
+              alt="Tiwar Empire Private Limited Logo" 
               height="60"
               className="mx-auto mb-4"
             />

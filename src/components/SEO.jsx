@@ -2,13 +2,13 @@ import React from 'react';
 import { Helmet } from 'react-helmet';
 
 const SEO = ({ 
-  title = "YDCODERS - IT Experts | Web Development & Digital Solutions",
-  description = "YDCODERS provides world-class IT solutions including web development, mobile app development, digital marketing, and custom software development. Hire experienced IT experts for your next project.",
-  keywords = "YDCODERS, IT solutions, web development, mobile app development, digital marketing, software development, React, Node.js, Python, Flutter, IT experts, technology solutions",
+  title = "Tiwar Empire Private Limited - IT Experts | Web Development & Digital Solutions",
+  description = "Tiwar Empire Private Limited provides world-class IT solutions including web development, mobile app development, digital marketing, and custom software development. Hire experienced IT experts for your next project.",
+  keywords = "Tiwar Empire Private Limited, IT solutions, web development, mobile app development, digital marketing, software development, React, Node.js, Python, Flutter, IT experts, technology solutions",
   image = "https://ydcoders.com/images/og-image.jpg",
   url = "https://ydcoders.com",
   type = "website",
-  author = "YDCODERS",
+  author = "Tiwar Empire Private Limited",
   canonical,
   noindex = false,
   structuredData
@@ -40,7 +40,7 @@ const SEO = ({
       <meta property="og:image" content={fullImageUrl} />
       <meta property="og:image:width" content="1200" />
       <meta property="og:image:height" content="630" />
-      <meta property="og:site_name" content="YDCODERS" />
+      <meta property="og:site_name" content="Tiwar Empire Private Limited" />
       <meta property="og:locale" content="en_US" />
 
       {/* Twitter */}

@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import logo from '../assets/logo.png';
 
 const Header = () => {
   const [scrolled, setScrolled] = useState(false);
@@ -60,12 +59,7 @@ const Header = () => {
         <div className="flex items-center justify-between">
           {/* Logo */}
           <Link to="/" className="flex items-center transition-transform duration-300 hover:scale-105">
-            <img 
-              src={logo} 
-              alt="YDCODERS Logo" 
-              className="h-12 w-auto"
-            /> 
-            <span className="text-white text-lg font-bold ml-2">YDCODERS </span> 
+            <span className="text-white text-lg font-bold whitespace-nowrap">Tiwar Empire Private Limited</span> 
           </Link>
           
           {/* Desktop Navigation */}

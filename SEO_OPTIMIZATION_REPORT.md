@@ -1,7 +1,7 @@
-# YDCoders Website - Comprehensive SEO Optimization Report
+# Tiwar Empire Private Limited Website - Comprehensive SEO Optimization Report
 
 ## Overview
-This document outlines the comprehensive SEO optimization implemented for the YDCoders website to improve search engine visibility, user experience, and performance.
+This document outlines the comprehensive SEO optimization implemented for the Tiwar Empire Private Limited website to improve search engine visibility, user experience, and performance.
 
 ## 🎯 Key SEO Improvements Implemented
 
@@ -89,13 +89,13 @@ This document outlines the comprehensive SEO optimization implemented for the YD
 ## 🔍 Page-Specific Optimizations
 
 ### Homepage (`src/pages/Home.jsx`)
-- **Title**: "YDCODERS - IT Experts | Web Development, Mobile Apps & Digital Solutions"
+- **Title**: "Tiwar Empire Private Limited - IT Experts | Web Development, Mobile Apps & Digital Solutions"
 - **Meta Description**: Comprehensive service overview with CTA
 - **Structured Data**: Organization, Website, and Service schemas
 - **Keywords**: IT solutions, web development, mobile apps, digital marketing
 
 ### Career Page (`src/pages/Careers.jsx`)
-- **Title**: "Careers at YDCODERS - Join Our Expert IT Team"
+- **Title**: "Careers at Tiwar Empire Private Limited - Join Our Expert IT Team"
 - **Meta Description**: Career-focused with job opportunities
 - **Structured Data**: Job posting schema for each position
 - **Keywords**: IT careers, developer jobs, remote work, tech jobs
@@ -237,6 +237,6 @@ This document outlines the comprehensive SEO optimization implemented for the YD
 ---
 
 **Report Generated**: December 2024  
-**Website**: YDCoders (ydcoders.com)  
+**Website**: Tiwar Empire Private Limited (ydcoders.com)  
 **Optimization Level**: Comprehensive  
 **Status**: Production Ready ✅

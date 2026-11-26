@@ -1,4 +1,4 @@
-# SEO Acceleration Strategy for YDCoders
+# SEO Acceleration Strategy for Tiwar Empire Private Limited
 
 ## 🎯 Why Your Site Isn't Visible in Google Yet
 
@@ -29,7 +29,7 @@ Steps:
 **Priority: HIGH**
 
 Setup:
-- Business name: YDCoders
+- Business name: Tiwar Empire Private Limited
 - Category: Software Development Company
 - Address: Kavathe-Mahankal, 416419, India
 - Phone: +91 7983833010
@@ -131,7 +131,7 @@ Write for:
 {
   "@context": "https://schema.org",
   "@type": "LocalBusiness",
-  "name": "YDCoders",
+  "name": "Tiwar Empire Private Limited",
   "address": {
     "@type": "PostalAddress",
     "streetAddress": "Kavathe-Mahankal",

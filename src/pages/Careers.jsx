@@ -61,7 +61,7 @@ const Careers = () => {
     "@type": "JobPosting",
     "hiringOrganization": {
       "@type": "Organization",
-      "name": "YDCODERS",
+      "name": "Tiwar Empire Private Limited",
       "sameAs": "https://ydcoders.com",
       "logo": "https://ydcoders.com/logo.jpeg"
     },
@@ -73,7 +73,7 @@ const Careers = () => {
       }
     },
     "title": "IT Expert Positions",
-    "description": "Join YDCODERS and work on exciting IT projects. We offer positions in Frontend Development, Backend Development, Full Stack Development, and Mobile App Development.",
+    "description": "Join Tiwar Empire Private Limited and work on exciting IT projects. We offer positions in Frontend Development, Backend Development, Full Stack Development, and Mobile App Development.",
     "employmentType": "FULL_TIME",
     "validThrough": "2025-12-31",
     "applicantLocationRequirements": {
@@ -123,9 +123,9 @@ const Careers = () => {
   return (
     <div className="careers-page">
       <SEO 
-        title="Careers at YDCODERS - Join Our IT Expert Team | Job Openings"
-        description="Join YDCODERS team! We're hiring Frontend Developers, Backend Developers, Full Stack Developers, and Mobile App Developers. Apply now for exciting IT career opportunities with competitive packages."
-        keywords="YDCODERS careers, IT jobs, developer jobs, frontend developer, backend developer, full stack developer, mobile app developer, React jobs, Node.js jobs, Python jobs, IT career opportunities, software development jobs"
+        title="Careers at Tiwar Empire Private Limited - Join Our IT Expert Team | Job Openings"
+        description="Join Tiwar Empire Private Limited team! We're hiring Frontend Developers, Backend Developers, Full Stack Developers, and Mobile App Developers. Apply now for exciting IT career opportunities with competitive packages."
+        keywords="Tiwar Empire Private Limited careers, IT jobs, developer jobs, frontend developer, backend developer, full stack developer, mobile app developer, React jobs, Node.js jobs, Python jobs, IT career opportunities, software development jobs"
         url="/careers"
         image="https://ydcoders.com/images/careers-og.jpg"
         structuredData={structuredData}
@@ -149,7 +149,7 @@ const Careers = () => {
               Job Opening In IT Company. Apply Now!
             </p>
             <div className="hero-description text-lg md:text-xl text-white max-w-4xl mx-auto">
-              <p>IT Experts are hired by YDCODERS and fully dedicated to Client Services or IT projects.</p>
+              <p>IT Experts are hired by Tiwar Empire Private Limited and fully dedicated to Client Services or IT projects.</p>
             </div>
           </div>
         </div>

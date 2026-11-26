@@ -18,7 +18,7 @@ const Home = () => {
   const structuredData = {
     "@context": "https://schema.org",
     "@type": "Organization",
-    "name": "YDCODERS",
+    "name": "Tiwar Empire Private Limited",
     "url": "https://ydcoders.com",
     "logo": "https://ydcoders.com/logo.jpeg",
     "description": "Leading IT company providing web development, mobile app development, digital marketing, and custom software solutions.",
@@ -122,9 +122,9 @@ const Home = () => {
   return (
     <div className="home-page">
       <SEO 
-        title="YDCODERS - IT Experts | Web Development, Mobile Apps & Digital Solutions"
+        title="Tiwar Empire Private Limited - IT Experts | Web Development, Mobile Apps & Digital Solutions"
         description="Leading IT company providing world-class web development, mobile app development, digital marketing, and custom software solutions. Hire experienced IT experts for your business growth."
-        keywords="YDCODERS, IT solutions, web development, mobile app development, digital marketing, software development, React, Node.js, Python, Flutter, IT experts, technology solutions, custom software, responsive design, SEO services, cloud solutions, cybersecurity"
+        keywords="Tiwar Empire Private Limited, IT solutions, web development, mobile app development, digital marketing, software development, React, Node.js, Python, Flutter, IT experts, technology solutions, custom software, responsive design, SEO services, cloud solutions, cybersecurity"
         url="/"
         structuredData={structuredData}
       />
@@ -160,7 +160,7 @@ const Home = () => {
                   style={{ border: 0, borderRadius: '10px' }}
                   allowFullScreen=""
                   loading="lazy"
-                  title="YDCODERS Location"
+                  title="Tiwar Empire Private Limited Location"
                   className="w-full h-96 rounded-lg shadow-lg"
                 ></iframe>
               </div>
